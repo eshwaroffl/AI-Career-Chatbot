@@ -1,0 +1,180 @@
+/* 🌙 Dark Responsive Design for AI Career Companion */
+
+:root {
+  --bg-color: #0f172a;
+  --card-bg: #1e293b;
+  --accent: #38bdf8;
+  --accent-hover: #0ea5e9;
+  --text-color: #e2e8f0;
+  --input-bg: #334155;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --radius: 14px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  background-color: var(--card-bg);
+  padding: 40px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  width: 100%;
+  max-width: 450px;
+  animation: fadeIn 0.8s ease;
+}
+
+h1 {
+  color: var(--accent);
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  color: #94a3b8;
+  margin-bottom: 25px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: var(--radius);
+  background: var(--input-bg);
+  color: var(--text-color);
+  font-size: 0.95rem;
+  outline: none;
+}
+
+input:focus {
+  border: 1px solid var(--accent);
+  background: #475569;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: var(--accent);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.4);
+}
+
+button:hover {
+  background: var(--accent-hover);
+  transform: scale(1.02);
+  transition-duration: 0.35s;
+}
+
+.result-box {
+  margin-top: 25px;
+  border-radius: var(--radius);
+  padding: 20px;
+  text-align: left;
+  font-size: 0.95rem;
+  color: #e0f2fe;
+  white-space: pre-line;
+  line-height: 1.6;
+  animation: fadeIn 0.7s ease;
+  overflow-wrap: break-word;
+}
+
+footer {
+  margin-top: 30px;
+  font-size: 0.85rem;
+  color: #64748b;
+  text-align: center;
+}
+
+/* 🎥 Responsive Adjustments */
+
+@media (max-width: 768px) {
+  .container {
+    padding: 30px 25px;
+  }
+
+  input, button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .result-box {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    padding: 25px 20px;
+    border-radius: 10px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 0.85rem;
+  }
+
+  footer {
+    font-size: 0.75rem;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.result-box ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding-left: 10px;
+}
+
+.result-box li {
+  margin-bottom: 8px;
+  color: #bae6fd;
+  line-height: 1.5;
+}
+
+.result-box p {
+  margin-bottom: 15px;     /* space between paragraphs */
+  line-height: 1.7;        /* more readable text */
+  color: #e0f2fe;          /* soft light blue */
+}
